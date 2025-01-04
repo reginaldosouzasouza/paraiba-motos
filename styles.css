@@ -24,7 +24,7 @@ body {
 }
 
 .logo-img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5px; /* Opcional: deixa os cantos arredondados */
 }
@@ -38,13 +38,6 @@ body {
        height:200px; 
     width:200px; 
     }
-
-
-
-
-
-
-
 
 
 /* Responsividade do logo */
@@ -83,6 +76,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+  
 }
 
 /* Estilo da Logomarca */
@@ -93,11 +87,18 @@ body {
 }
 
 /* Estilo do Nome */
-.logo-nome {
-    color: white;
+.logo-nome  {
+    color:#fff;
     font-size: 1.5rem;
     margin: 0;
+    background-color:#333;
+   
 }
+
+.logo-nome:hover {
+    color: #ff6600; /* Cor ao passar o mouse */
+}
+
 
 /* Menu */
 .menu ul {
@@ -120,47 +121,6 @@ body {
 }
 
 
-
-/* Cabeçalho 
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.header .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.header .menu ul li {
-    margin: 0.5rem;
-}
-
-.header .menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-}
-
-.header .menu ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-*/
 /* Banner */
 .banner {
     background: url('banner.jpg') no-repeat center center/cover;
@@ -241,16 +201,82 @@ body {
     font-weight: bold;
 }
 
-/* Rodapé */
-.footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
+/* seção de contato */
+.contato {
+    background-color: #ef97b0;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.coluna h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.coluna1 h3 {
+    font-size: 30px;
 }
 
 
+
+.coluna p {
+    font-size: 14px;
+    color: #555;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    text-decoration: none;
+   
+}
+  
+   
+.icon  {
+
+    width: 50px;
+    height: 50px;  
+}
+
+
+
+
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+#contato-whatzapp {
+    text-decoration: none;
+    color:#333;
+
+
+   
+}
 
 .footer p {
     color:#ffffff;
@@ -311,13 +337,15 @@ body {
 /* Detalhes da Moto */
 .detalhes {
     padding: 2rem 0;
-    background-color: #fff;
+  
+   
 }
 
 .detalhes h2 {
     text-align: center;
     color: #333;
     margin-bottom: 1rem;
+   
 }
 
 .detalhes p {
@@ -417,6 +445,8 @@ body {
 .detalhes-grid {
     display: flex;
     gap: 1rem;
+
+  
 }
 
 /* Imagem principal */
@@ -467,71 +497,204 @@ body {
 }
 
 
-/* Galeria de Fotos */
 .galeria {
     padding: 2rem 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .galeria h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #333;
 }
 
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    gap: 1rem; /* Espaço entre os itens */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.moto-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.moto-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+    justify-content: space-around;
+    gap: 1.5rem;
 }
 
 .moto-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: #f9f9f9;
     padding: 1rem;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Define o tamanho máximo do card dentro do grid */
-    max-width: 250px; /* Aumente este valor para colunas maiores */
-    margin: auto; /* Centraliza os cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 1.5rem); /* Calcula a largura com margem */
+    max-width: calc(33.333% - 1.5rem);
 }
 
 .moto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .moto-card img {
-    width: 100%;
-    max-width: 250px; /* Ajuste conforme necessário */
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 .moto-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+    margin: 1rem 0 0.5rem;
+    color: #444;
 }
 
 .moto-card p {
-    font-size: 1rem;
+    color: #e63946;
     font-weight: bold;
-    color: red;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .moto-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moto-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 
+
+/* Container do WhatsApp */
+#whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Mensagem */
+  #whatsapp-message {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+/* seção de vídeos  */
+
+  .videos {
+    background-color: #fafafa40;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.videos h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+    margin: 0 auto;
+}
+
+iframe, video {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .coluna {
+        max-width: 100%;
+    }
+
+    iframe, video {
+        height: 200px;
+    }
+}
+
+
+
+  /* Ícone do WhatsApp */
+  #whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  #whatsapp-icon img {
+    width: 50%;
+    height: 50%;
+  }
+  
+  #whatsapp-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+  
+  /* Animação de fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .videos h1{
+    background-color: #ddd;
+    color:#444;
+    font-weight: bolder;
+    text-align: center;
+
+  }
+
+  .videos-teste {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+  }
+  
+  video {
+    width: 100%; /* Ajuste a porcentagem conforme necessário */
+    margin: 10px;
+  }
+  
+  /* Media query para telas menores (ex: smartphones) */
+  @media (max-width: 768px) {
+    video {
+      width: 150%; /* Cada vídeo ocupará 100% da largura da tela */
+      margin: 5px; /* Ajuste a margem para telas menores */
+    }
+  }
 
